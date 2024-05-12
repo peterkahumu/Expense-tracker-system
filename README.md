@@ -5,7 +5,7 @@ In this assignment, you will utilize your knowledge of HTML and CSS to create an
 
 ## Requirements:
 
-    ## HTML Structure:
+## HTML Structure:
         Create the below html files:
         index.html
         register.html
@@ -16,15 +16,15 @@ In this assignment, you will utilize your knowledge of HTML and CSS to create an
         
         Structure your HTML document with appropriate tags such as <html>, <head>, <title>, <section>, <div>, <form> and <body>.
 
-    ## CSS Styling:
+## CSS Styling:
         Create a CSS file named styles.css.
         Style your portfolio using CSS to make it visually appealing.
         Utilize CSS properties such as font-family, color, background-color, margin, padding, border, text-align, etc.
         Ensure your webiste is responsive and looks good on different screen sizes (desktop, tablet, mobile).
 
-    ## GitHub Classroom:
+## GitHub Classroom:
         Submit the link to your GitHub repository through GitHub Classroom.
         Your submission will be automatically graded based on the correctness of your HTML structure, CSS styling, responsiveness, and organization of your GitHub repository.
 
-    ## Additional Considerations:
+## Additional Considerations:
         Use semantic HTML tags where appropriate (e.g., <header>, <section>, <article>, <footer>).
