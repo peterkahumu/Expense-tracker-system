@@ -1,4 +1,4 @@
-# Assignment Title: Building The Expense Tracker Application Interface
+# Building The Expense Tracker Application Interface
 
 ## Assignment Description:
 In this assignment, you will utilize your knowledge of HTML and CSS to create an expense tracker website. Your website will showcase a landing page, registration and login page, add, edit and view expenses pages. This assignment will help you practice structuring web pages using HTML and styling them with CSS.
