@@ -1,0 +1,134 @@
+name: HTML & CSS Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check if specific files exist
+      run: |
+        # Search repo for necessary files
+        if [ -f "index.html" ] && [ -f "styles.css" ] && [ -f "login.html" ] && [ -f "register.css" ] && [ -f "add_expense.html" ] && [ -f "edit_expense.html" ] && [ -f "view_expense.html" ]; then
+          echo "Files exist."
+        else
+          echo "Error: Files not found."
+          exit 1
+
+      - name: Check HTML structure
+        run: |
+          # Search for the existence of required HTML tags
+          if grep -q "<!DOCTYPE>" $(git ls-files '*.html'); then
+            echo "HTML tag <tag_name> found in the repository."
+          else
+           echo "Error: HTML tag <tag_name> not found in any HTML file."
+          exit 1
+          fi
+
+          if grep -q "<!DOCTYPE>" $(git ls-files '*.html'); then
+            echo "HTML tag <!DOCTYPE> found in the repository."
+          else
+            echo "Error: HTML tag <tag_name> not found in any HTML file."
+            exit 1
+          fi
+          
+          if grep -q "<html>" $(git ls-files '*.html'); then
+            echo "HTML tag <head> found in the repository."
+          else
+            echo "Error: HTML tag <html> not found in any HTML file."
+            exit 1
+          fi
+
+          if grep -q "<head>" $(git ls-files '*.html'); then
+            echo "HTML tag <head> found in the repository."
+          else
+            echo "Error: HTML tag <head> not found in any HTML file."
+            exit 1
+          fi
+          
+          if grep -q "<title>" $(git ls-files '*.html'); then
+            echo "HTML tag <title> found in the repository."
+          else
+            echo "Error: HTML tag <title> not found in any HTML file."
+            exit 1
+          fi
+
+          if grep -q "<section>" $(git ls-files '*.html'); then
+            echo "HTML tag <section> found in the repository."
+          else
+            echo "Error: HTML tag <section> not found in any HTML file."
+            exit 1
+          fi
+
+          if grep -q "<div>" $(git ls-files '*.html'); then
+            echo "HTML tag <div> found in the repository."
+          else
+            echo "Error: HTML tag <div> not found in any HTML file."
+            exit 1
+          fi
+
+          if grep -q "<form>" $(git ls-files '*.html'); then
+            echo "HTML tag <form> found in the repository."
+          else
+            echo "Error: HTML tag <form> not found in any HTML file."
+            exit 1
+          fi
+
+          if grep -q "<table>" $(git ls-files '*.html'); then
+            echo "HTML tag <table> found in the repository."
+          else
+            echo "Error: HTML tag <table> not found in any HTML file."
+            exit 1
+          fi
+       - name: Check for CSS property in specific file
+         run: |
+           if grep -q "background-color:" styles.css; then
+             echo "CSS background-color property found in the specified CSS file."
+           else
+             echo "Error: CSS background-color property not found in the specified CSS file."
+             exit 1
+           fi
+
+           if grep -q "font-family" styles.css; then
+             echo "CSS font-family property found in the specified CSS file."
+           else
+             echo "Error: CSS font-family property not found in the specified CSS file."
+             exit 1
+           fi
+
+           if grep -q "color" styles.css; then
+             echo "CSS color property found in the specified CSS file."
+           else
+             echo "Error: CSS color property not found in the specified CSS file."
+             exit 1
+           fi
+
+           if grep -q "margin" styles.css; then
+             echo "CSS margin property found in the specified CSS file."
+           else
+             echo "Error: CSS margin property not found in the specified CSS file."
+             exit 1
+           fi
+
+           if grep -q "padding" styles.css; then
+             echo "CSS padding property found in the specified CSS file."
+           else
+             echo "Error: CSS padding property not found in the specified CSS file."
+             exit 1
+           fi
+
+          echo "HTML and CSS test passed"
+
+      - name: Display results
+        run: |
+          echo "HTML and CSS tests completed successfully"
