@@ -29,7 +29,7 @@ jobs:
       - name: Check HTML structure
         run: |
           # Search repo for necessary files
-          if [ -f "index.html" ] && [ -f "styles.css" ] && [ -f "login.html" ] && [ -f "register.css" ] && [ -f "add_expense.html" ] && [ -f "edit_expense.html" ] && [ -f "view_expense.html" ]; then
+          if [ -f "index.html" ] && [ -f "styles.css" ] && [ -f "login.html" ] && [ -f "register.html" ] && [ -f "add_expense.html" ] && [ -f "edit_expense.html" ] && [ -f "view_expense.html" ]; then
             echo "Files exist."
           else
             echo "Error: Files not found."
