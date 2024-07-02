@@ -1,0 +1,141 @@
+/* Main styles for larger screens */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and main content */
+  gap: 20px; /* Gap between grid items */
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto; /* Center align container */
+}
+
+/* Media queries for responsive layout */
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Full width for smaller screens */
+  }
+
+  aside {
+    display: none; /* hide the sidebar on smaller screens */
+  }
+
+  /* adjust the padding of the menu bar */
+    nav ul li a{
+        padding: 0;
+    }
+  
+}
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light gray background */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+header,
+nav,
+footer {
+  background-color: #00796b; /* Teal background for header, nav, and footer */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center align navigation links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px; /* Add space between navigation items */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px; /* Increase padding for better touchability */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav a:hover {
+  background-color: #004d40; /* Darker teal on hover */
+}
+
+aside {
+  background-color: #1a237e; /* Dark blue background for sidebar */
+  color: white;
+  padding: 20px;
+  height: 400px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 15;
+  font-family: cursive;
+}
+
+aside h2 {
+  font-size: 1.5rem; /* Larger font size for section headings */
+  margin-top: 0; /* Remove default margin */
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside a {
+  color: white;
+  text-decoration: none;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 20px;
+}
+
+.blog > div {
+  background-color: #ffffff; /* White background for each blog entry */
+  padding: 20px;
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  height: auto;
+}
+
+.blog h3 {
+  margin-top: 0; /* Remove top margin for headings */
+}
+
+.blog img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Ensure images and videos are responsive */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #00796b;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
