@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to your account</title>
+
+    <!-- main styles. -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Add Expense</a></li>
+                <li><a href="view_expense.html">View Expense</a></li>
+                <li><a href="edit_expense.html">Edit Expense</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header><br><br>
+
+    <h1>Expense Tracker System</h1>
+
+    <!-- login form. -->
+    <section id="form">
+        <form action="login.php" method="POST">
+            <h2>LOGIN TO YOUR ACCOUNT</h2>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password" required><br><br>
+
+            <input type="submit" name="submit" id="submit" value="Login">
+            <br><br>
+            <span>Don't have an account? <a href="register.html">Sign up here</a></span>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2021 Expense Tracker System. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
